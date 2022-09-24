@@ -1,14 +1,13 @@
 addEventListener("DOMContentLoaded", ()=>{
-    //6. Considere dos variables llamadas temperatura y presión. Escriba una sentencia if-else que muestre
-    // en pantalla la palabra Alarma si la variable presión es mayor a 200 o si la variable temperatura es
-    // mayor a 100. En caso contrario, se debe mostrar en pantalla la palabra Normal.
-    
-    let presion = Number(prompt('ingrese el valor de la presion'))
-    let temperatura = Number(prompt('ingrese el valor de la temperatura'))
-    if(presion > 200 || temperatura > 100){
-        console.log('ALERTA...')
+//7. Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
+// $130.000 el descuento será del 15%, de lo contrario no hay descuento.
+    let pago = Number(prompt('ingrese el valor a pagar '))
+    if (pago>130000){
+        let porcentaje = pago*0.15
+        let descuento = pago-porcentaje
+        console.log(`El valor a pagar con descuento es ${descuento} y el valor original era ${pago}`) 
     }
-    else {
-        console.log('NORMAL...')
+    else{
+        console.log(`el valor a pagar es ${pago}`)
     }
 })
