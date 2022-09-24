@@ -1,13 +1,19 @@
 addEventListener("DOMContentLoaded", ()=>{
-//7. Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
-// $130.000 el descuento será del 15%, de lo contrario no hay descuento.
-    let pago = Number(prompt('ingrese el valor a pagar '))
-    if (pago>130000){
-        let porcentaje = pago*0.15
-        let descuento = pago-porcentaje
-        console.log(`El valor a pagar con descuento es ${descuento} y el valor original era ${pago}`) 
-    }
-    else{
-        console.log(`el valor a pagar es ${pago}`)
-    }
+    //8. En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
+    // la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
+    // a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.
+        let tipoEmpleado = prompt('ingrese el tipo de empleado ')
+        if(tipoEmpleado == 'planta'){
+            let horas1 = Number(prompt('ingrese las horas que trabajo '))
+            let calculopago = horas1*20000
+            console.log(`su pago es ${calculopago}`)
+        }
+        else if (tipoEmpleado == 'administrativo'){
+            let horas2 = Number(prompt('ingrese las horas que trabajo '))
+            let calculopago1 = horas2*10000
+            console.log(`su pago es ${calculopago1}`)
+        }
+        else{
+            console.log('ingrese un tipo de  empleado entre (planta/administrativo)...')
+        }
 })
