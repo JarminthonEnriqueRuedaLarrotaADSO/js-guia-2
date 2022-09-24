@@ -1,24 +1,19 @@
 addEventListener("DOMContentLoaded", ()=>{
-    // 9. Realizar el algoritmo que lea N números, calcule y escriba la suma de los pares y el producto de los
-    // impares. Numero par es aquel que su residuo igual a cero (num mod !=0)
+// 10.Calcular el valor total del valor de 5 productos, el IVA y el subtotal, visualizar los resultados de:
+// Iva, Subtotal y Total de la compra de los artículos.
+
     var i
-    var b = 0
-    var a = 0
-    var acum = 0
-    var acum1 = 1
-    let n = Number(prompt('ingrese el numero de numeros que va a ingresar'))
-    for(i=1;i<=n;i+=1) {
-        let numero = Number(prompt('ingrese el numero para calcular si es par'))
-        console.log(`${i}`)
-        if(numero % 2 == 0){
-            acum += numero
-            a = a+=1
-        }
-        else{
-            acum1 *= numero
-            b = b+=1
-        }
+    var iva = 0
+    var compra = 0
+    for(i=1;i<=5;i+=1) {
+        let producto = Number(prompt('ingrese el valor de los 5 productos'))
+        compra += producto
     }
-    console.log(`la cantidad de numeros pares es ${a} y la suma es : ${acum}`)
-    console.log(`la cantidad de numeros impares es ${b} y su producto es: ${acum1}`)
+    let IVA = Number(prompt('ingrese el valor de la siguiente forma ( 0."valor del iva") del IVA'))
+    let valoriva = compra*IVA
+    let subtotal = compra+valoriva
+    
+    console.log(`El valor del iva es ${IVA}`)
+    console.log(`El valor del total de la compra es : "${compra}"`)
+    console.log(`El valor del subtotal es : "${subtotal}"`)
 })
